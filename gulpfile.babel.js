@@ -51,7 +51,7 @@ function sassCompile() {
   return gulp
     .src(path.join(PATHS.src.styles, '**', '*'))
     .pipe(gulpif(!PRODUCTION, sourceMaps.init()))
-    .pipe(sass({ includePaths: PATHS.lib.styles }).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulpif(PRODUCTION, cleanCss({ compatibility: 'ie9' })))
     .pipe(gulpif(!PRODUCTION, sourceMaps.write()))
@@ -83,7 +83,6 @@ function scripts() {
       .src(path.join(PATHS.src.scripts, '**', '*.js'))
       .pipe(named())
       .pipe(gulpif(!PRODUCTION, sourceMaps.init()))
-      .pipe(webpackStream(webpackConfig, webpack))
       .pipe(gulpif(PRODUCTION, uglify()))
       .pipe(gulpif(!PRODUCTION, sourceMaps.write()))
       .pipe(gulp.dest(PATHS.dest.scripts))
