@@ -3,6 +3,7 @@ from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
     help = "creates an app in specified directory and adds it to my settings"
+    system = ""
 
     #  arguments
     def add_arguments(self, parser):
@@ -20,15 +21,26 @@ class Command(BaseCommand):
         return ""
 
     def directoryexists(self, path):
+        if self.system == "Windows":
+            if os.system(f"cd {path} >nul 2>&1") == 0:
+                return True
+            else :
+                return False
         if os.system(f"cd {path} 2>/dev/null") == 0:
             return True
         return False
+
+    def set_system(self):
+        import platform
+        self.system = platform.system()
+        return
 
     #  all the logic is handeled by handler
     def handle(self, *args, **kwargs):
         #  get arguments
         app_dir_dot = kwargs["appdir"][0]
         app_dir_sl = app_dir_dot.replace(".", "/")
+        self.set_system()
         if self.directoryexists(app_dir_sl):
             self.stdout.write(
                 self.style.ERROR(
@@ -36,8 +48,12 @@ class Command(BaseCommand):
             )
             return
         app_name = app_dir_dot.split(".")[-1]
-        os.system(
-            f"mkdir -p {app_dir_sl} && python manage.py startapp {app_name} {app_dir_sl}")
+        if self.system == "Windows":
+            win_dr = app_dir_sl.replace("/","\\")
+            os.system(f"mkdir {win_dr} && python manage.py startapp {app_name} {app_dir_sl}")
+        else:
+            os.system(
+                f"mkdir -p {app_dir_sl} && python manage.py startapp {app_name} {app_dir_sl}")
         # write the app in settings
         with open("manage.py", "r") as file:
             filedata = file.read()
@@ -77,3 +93,8 @@ class Command(BaseCommand):
         self.stdout.write(
             self.style.SUCCESS(msg)
         )
+
+
+# success 0 error 1
+#  echo %errorlevel%
+# 
