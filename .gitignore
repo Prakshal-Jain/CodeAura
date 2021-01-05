@@ -23,7 +23,10 @@ static/dist
 venv
 
 # vscode
-.vscode
+.vscode/
 
 # environment variables
 .env
+
+# my trial directyory
+trial
