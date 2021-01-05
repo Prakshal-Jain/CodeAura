@@ -5,9 +5,11 @@ name = "pypi"
 
 [packages]
 django = "*"
+pillow = "*"
 
 [dev-packages]
-
+django-debug-toolbar = "*"
+django-mail-panel = "*"
 
 [requires]
 python_version = "3.9"
