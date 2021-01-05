@@ -12,6 +12,7 @@ DEBUG = False
 
 SECRET_KEY = os.environ("SECRET_KEY")
 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 # database
 # DATABASES = {

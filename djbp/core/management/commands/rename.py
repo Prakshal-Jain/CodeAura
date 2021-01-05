@@ -45,6 +45,7 @@ class Command(BaseCommand):
         files_to_rename = [
             f"{current_project_name}/settings/base.py",
             f"{current_project_name}/wsgi.py",
+            f"{current_project_name}/asgi.py",
             "manage.py",
         ]
 
