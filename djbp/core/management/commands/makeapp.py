@@ -40,7 +40,7 @@ class Command(BaseCommand):
         #  get arguments
         app_dir_dot = kwargs["appdir"][0]
         app_dir_sl = app_dir_dot.replace(".", "/")
-        set_system()
+        self.set_system()
         if self.directoryexists(app_dir_sl):
             self.stdout.write(
                 self.style.ERROR(
@@ -49,7 +49,8 @@ class Command(BaseCommand):
             return
         app_name = app_dir_dot.split(".")[-1]
         if self.system == "Windows":
-            os.system(f"mkdir {app_dir_sl.replace("/","\\")} && python manage.py startapp {app_name} {app_dir_sl}")
+            win_dr = app_dir_sl.replace("/","\\")
+            os.system(f"mkdir {win_dr} && python manage.py startapp {app_name} {app_dir_sl}")
         else:
             os.system(
                 f"mkdir -p {app_dir_sl} && python manage.py startapp {app_name} {app_dir_sl}")

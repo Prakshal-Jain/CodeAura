@@ -31,8 +31,8 @@ These commands are used like normal django commands like `python manage.py <comm
 ### makeapp
 + makeas and app with the directory (<folder>.<folder>...<app>) 
 + adds it to installed_apps in the django settings
-+ eg -> `python manage.py makeapp egapp apps.egapp`
-+ eg -> `python manage.py makeapp egapp apps.main.egapp`
++ eg -> `python manage.py makeapp apps.egapp`
++ eg -> `python manage.py makeapp apps.main.egapp`
 + do not remove the `# autoaddhere` in `djbp/settings/base.py` , this is used by command to add the app in setting
 
 ### rename 
