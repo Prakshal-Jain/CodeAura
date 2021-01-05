@@ -1,0 +1,49 @@
+{
+  "name": "--add",
+  "version": "1.0.0",
+  "description": "--add",
+  "main": "index.js",
+  "dependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "css-loader": "^4.2.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0", 
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "jquery": "^3.5.1",
+    "vinyl-named": "^1.1.0",
+    "what-input": "^5.2.10",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "ie >= 9",
+    "iOS >= 7",
+    "not dead"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "--add"
+  },
+  "author": "Harjot Barn",
+  "license": "MIT",
+  "bugs": {
+    "url": "--add"
+  },
+  "homepage": "--add"
+}

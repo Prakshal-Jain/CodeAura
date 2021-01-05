@@ -1,0 +1,29 @@
+# Vim
+*.swp
+
+# PyCharm
+.idea
+
+# Python bytecode
+__pycache__
+
+# SQLITE database file
+db.sqlite3
+
+# User-uploaded files
+media
+
+# JavaScript dependencies
+node_modules
+
+# Built static files
+static/dist
+
+# Python virtual environment
+venv
+
+# vscode
+.vscode
+
+# environment variables
+.env
