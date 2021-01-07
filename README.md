@@ -4,7 +4,7 @@ This is a ready to use django project.
 
 If you do not find something you want to know in this file or any issues, please let me know. My Email is harjotbarn99@gmail.com
 
-**If you find my repository useful please send me an email to let me know if someone is using it, not necessary but appereciated. **
+**If you find my repository useful please send me an email to let me know if someone is using it, not necessary but appreciated. **
 
 #### features
 
