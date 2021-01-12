@@ -19,7 +19,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # mine
     "CodeAura.core",
-    # autoaddhere
+	"apps.home",
+	# autoaddhere
 
     # third party
 ]
