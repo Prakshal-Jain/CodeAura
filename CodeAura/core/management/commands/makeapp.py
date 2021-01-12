@@ -1,6 +1,7 @@
 import os
 from django.core.management.base import BaseCommand
 
+
 class Command(BaseCommand):
     help = "creates an app in specified directory and adds it to my settings"
     system = ""
@@ -24,7 +25,7 @@ class Command(BaseCommand):
         if self.system == "Windows":
             if os.system(f"cd {path} >nul 2>&1") == 0:
                 return True
-            else :
+            else:
                 return False
         if os.system(f"cd {path} 2>/dev/null") == 0:
             return True
@@ -49,8 +50,9 @@ class Command(BaseCommand):
             return
         app_name = app_dir_dot.split(".")[-1]
         if self.system == "Windows":
-            win_dr = app_dir_sl.replace("/","\\")
-            os.system(f"mkdir {win_dr} && python manage.py startapp {app_name} {app_dir_sl}")
+            win_dr = app_dir_sl.replace("/", "\\")
+            os.system(
+                f"mkdir {win_dr} && python manage.py startapp {app_name} {app_dir_sl}")
         else:
             os.system(
                 f"mkdir -p {app_dir_sl} && python manage.py startapp {app_name} {app_dir_sl}")
@@ -93,8 +95,3 @@ class Command(BaseCommand):
         self.stdout.write(
             self.style.SUCCESS(msg)
         )
-
-
-# success 0 error 1
-#  echo %errorlevel%
-# 

@@ -57,9 +57,13 @@ DEBUG_TOOLBAR_CONFIG = {
     "SHOW_TOOLBAR_CALLBACK": show_toolbar,
 }
 
+
+#  there are 2 options to display sent emails, you should not use both of them
+
+#  1 django toolbar email the debug toolbar will display them
 # EMAIL_BACKEND = "mail_panel.backend.MailToolbarBackend"
-# MAIL_TOOLBAR_TTL = 86400  # 1 Day
+# MAIL_TOOLBAR_TTL = 86400  # no of days emails are stored - currently 1 Day
 
 
-# email printed to console
+# 2 email printed to console
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

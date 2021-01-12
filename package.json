@@ -1,7 +1,7 @@
 {
-  "name": "--add",
+  "name": "code-aura",
   "version": "1.0.0",
-  "description": "--add",
+  "description": "This is an app",
   "main": "index.js",
   "dependencies": {
     "@babel/core": "^7.11.4",
@@ -38,12 +38,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "--add"
+    "url": "https://github.com/Prakshal-Jain/CodeAura"
   },
-  "author": "Harjot Barn --change",
+  "author": "Harjot Barn",
   "license": "MIT --change",
   "bugs": {
-    "url": "--add"
+    "url": "https://github.com/Prakshal-Jain/CodeAura#issues"
   },
-  "homepage": "--add"
+  "homepage": "https://github.com/Prakshal-Jain/CodeAura"
 }
