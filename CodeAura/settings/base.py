@@ -1,8 +1,7 @@
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
@@ -19,9 +18,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # mine
     "CodeAura.core",
-	"apps.home",
-	# autoaddhere
-
+    "apps.home",
+    # autoaddhere
     # third party
 ]
 
@@ -35,7 +33,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-ROOT_URLCONF = 'CodeAura.urls'
+ROOT_URLCONF = "CodeAura.urls"
 
 TEMPLATES = [
     {
@@ -53,7 +51,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'CodeAura.wsgi.application'
+WSGI_APPLICATION = "CodeAura.wsgi.application"
 
 
 # Password validation
@@ -63,9 +61,15 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator", },
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator", },
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator", },
+    {
+        "NAME": "django.contrib.auth.password_validation.MinimumLengthValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.CommonPasswordValidator",
+    },
+    {
+        "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
+    },
 ]
 
 
@@ -87,7 +91,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "..", "..", "static", "dist")]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static", "dist"),
+    os.path.join(BASE_DIR, "static", "others"),
+]
 
 MEDIA_URL = "/media/"
-MEDIA_ROOT = os.path.join(BASE_DIR, "..", "..", "media")
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
