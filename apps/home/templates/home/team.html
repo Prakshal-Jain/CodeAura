@@ -1,0 +1,38 @@
+{% load static %}
+<div id="reviews" class="yd-reviews">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-12 col-lg-8 offset-lg-2">
+          <div class="intro wow fadeIn" data-wow-delay="0.1s">
+            <h1>Meet our Team</h1>
+            <p>
+               We are a team of artists who have a goal to provide the best tools to other artists
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-8 offset-lg-2 text-center">
+          <div class="review-cards owl-carousel owl-theme wow fadeInDown" data-wow-delay="0.2s">
+           <!-- For Loop Starts -->
+           {% for person in names %}
+            <div class="card-single">
+              <div class="review-text">
+                <h1>
+                 {{ person.comments }}
+                </h1>
+              </div>
+              <div class="review-attribution">
+                <div class="review-img">
+                  <img class="img-fluid rounded-circle" src="{% static 'img/Team/Prakshal.jpg' %}" alt="Review">
+                </div>
+                <h2>{{ person.first_name }} {{ person.last_name }}</h2>
+                <h6>{{ person.contribution }}</h6>
+                <a href="mailto:{{ person.email }}">Email</a>
+              </div>
+            </div>
+            {% endfor %}
+             <!-- For loop Ends -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

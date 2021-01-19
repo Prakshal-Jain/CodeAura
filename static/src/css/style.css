@@ -1427,7 +1427,7 @@ body {
 }
 
 .footer-sm .footer-logo {
-	font-family: 'Montserrat';
+	font-family: jungle;
 	font-size: 18px;
 	font-weight: 600;
 	color: #DAA520;
@@ -1705,7 +1705,7 @@ body {
 
 	.footer-sm .footer-logo {
 	 margin-bottom: 0;
-	 font-size: 16px;
+	 font-size: 22px;
 	 display: block;
 	}
 

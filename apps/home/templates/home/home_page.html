@@ -2,9 +2,6 @@
 {% block title %}Home{% endblock %}
 {% load static %}
 {% block content %}
-
-
-
   <div id="main" class="main">
     <div class="home"><!-- Hero Section-->
       <div class="container">
@@ -240,45 +237,10 @@
     </div>
 
 
-
-     <div id="reviews" class="yd-reviews"><!-- Array Reviews -->
-       <div class="container">
-         <div class="row text-center">
-           <div class="col-sm-12 col-lg-8 offset-lg-2">
-             <div class="intro wow fadeIn" data-wow-delay="0.1s">
-               <h1>Meet our Team</h1>
-               <p>
-                  We are a team of artists who have a goal to provide the best tools to other artists
-               </p>
-             </div>
-           </div>
-
-           <div class="col-sm-12 col-lg-8 offset-lg-2 text-center">
-             <div class="review-cards owl-carousel owl-theme wow fadeInDown" data-wow-delay="0.2s">
-              <!-- For Loop Starts -->
-               <div class="card-single">
-                 <div class="review-text">
-                   <h1>
-                    "The primary reason to work on this project is that we observed a pain point in the way we communicate and interact virtually. 
-                    We really think the methodology can be significantly changed & improved and adopted in the future!"
-                   </h1>
-                 </div>
-                 <div class="review-attribution">
-                   <div class="review-img">
-                     <img class="img-fluid rounded-circle" src="{% static 'img/Team/Prakshal.jpg' %}" alt="Review">
-                   </div>
-                   <h2>Prakshal Jain</h2>
-                   <h6>Project Initiator and Contributor</h6>
-                   <a href="mailto:prakshal@buffalo.edu">Email</a>
-                 </div>
-               </div>
-                <!-- For loop Ends -->
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-     <!-- Array Reviews Ends -->
+    <!-- Array Reviews -->
+    {% include "home/team.html" with names=team_lis %}
+    <!-- Array Reviews Ends -->
+     
 
 
     <!-- Array Pricing Section -->
@@ -336,17 +298,13 @@
     <div id="signup" class="cta-sm">
       <div class="container-m text-center">
         <div class="cta-content">
-           <h4>GRAB ARRAY FOR BEST PRICE TODAY</h4>
-           <h1>Start now and turn your online business into a profitable route.</h1>
+           <h1>Join our Team</h1>
            <div class="form wow fadeIn" data-wow-delay="0.2s">
             <form id="chimp-form" class="subscribe-form wow zoomIn" action="assets/php/subscribe.php" method="post" accept-charset="UTF-8" enctype="application/x-www-form-urlencoded" autocomplete="off" novalidate>
               <input class="mail" id="chimp-email" type="email" name="email" placeholder="Enter your email address" autocomplete="off">
-              <input class="submit-button" type="submit" value="Sign up now">
+              <input class="submit-button" type="submit" value="Join Us">
             </form>
             <div id="response"></div>
-          </div>
-          <div class="form-note">
-            <p>14-day free trial and no credit card required.</p>
           </div>
         </div>
       </div>
@@ -354,11 +312,11 @@
 
 
     <!-- Array Footer Section -->
-    <div class="footer-sm">
+    <div class="footer-sm" id="join_us">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <a class="footer-logo" href="#">array.</a>
+            <a class="footer-logo" href="#">CodeAura</a>
           </div>
           <div class="col-md-4">
             <h6>&copy; IOThemes 2018 Rights Reserved</h6>
