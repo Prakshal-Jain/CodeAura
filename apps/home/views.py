@@ -15,3 +15,6 @@ class HomePage(TemplateView):
 
 class TeamView(ListView):
     template_name = 'home/team.html'
+
+class SignIn(TemplateView):
+    template_name = "signups\sign-up.html"

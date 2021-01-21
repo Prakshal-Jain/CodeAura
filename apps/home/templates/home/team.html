@@ -22,7 +22,7 @@
               </div>
               <div class="review-attribution">
                 <div class="review-img">
-                  <img class="img-fluid rounded-circle" src="{% static 'img/Team/Prakshal.jpg' %}" alt="Review">
+                  <img class="img-fluid rounded-circle" src="{{ person.profile_image.url }}" alt="{{ person.first_name }}'s profile image">
                 </div>
                 <h2>{{ person.first_name }} {{ person.last_name }}</h2>
                 <h6>{{ person.contribution }}</h6>
