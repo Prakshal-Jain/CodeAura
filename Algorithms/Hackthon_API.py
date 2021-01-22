@@ -26,3 +26,7 @@ for info in all_events:
 
 retData = json.dumps(data)
 print(retData)
+
+# Creator: prakshal@buffalo.edu (Prakshal Jain)
+# Data-Source: https://mlh.io/events
+# Dependency: pip install requests , pip install beautifulsoup4
