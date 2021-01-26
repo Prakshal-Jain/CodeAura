@@ -13,4 +13,3 @@ class Command(BaseCommand):
             self.stdout.write(self.style.SUCCESS("admin user has created"))
         else:
             self.stdout.write(self.style.SUCCESS("admin user already exists"))
-

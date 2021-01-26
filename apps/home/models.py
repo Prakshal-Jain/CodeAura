@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import date
+from django import forms
 
 # Create your models here.
 class Team(models.Model):
@@ -10,3 +11,9 @@ class Team(models.Model):
     contribution = models.CharField("Please enter your contributions.", max_length=100, default="Contributor")
     email = models.EmailField("Email", default="codeaurahelpdesk@gmail.com")
     join_date = date.today()
+
+class User(models.Model):
+    first_name = models.CharField(max_length=100, blank=False, null=False)
+    last_name = models.CharField(max_length=100, blank=False, null=False)
+    email = models.EmailField("Email", blank=False, null=False)
+    password = models.CharField(max_length=100, blank=False, null=False)
