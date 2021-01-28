@@ -19,7 +19,10 @@ INSTALLED_APPS = [
     # mine
     "CodeAura.core",
     "apps.home",
-    # autoaddhere
+	"apps.social.text_chat",
+	"apps.social.voice_chat",
+	"apps.social.video_chat",
+	# autoaddhere
     # third party
 ]
 
