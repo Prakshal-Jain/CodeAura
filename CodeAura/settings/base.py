@@ -22,6 +22,7 @@ INSTALLED_APPS = [
 	"apps.social.text_chat",
 	"apps.social.voice_chat",
 	"apps.social.video_chat",
+	"apps.dashboard",
 	# autoaddhere
     # third party
 ]
