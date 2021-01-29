@@ -1,6 +1,14 @@
 from django.contrib import admin
-from .models import Team, User
+from django.contrib.auth.admin import UserAdmin
+
+from .models import Team, User, UserProfile
 
 # Register your models here.
 admin.site.register(Team)
-admin.site.register(User)
+
+@admin.register(User)
+class UserAdmin(UserAdmin):
+
+    inlines = (
+        UserProfile,
+    )
