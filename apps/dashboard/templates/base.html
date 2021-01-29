@@ -1,0 +1,94 @@
+<!--
+
+=========================================================
+* Volt - Bootstrap 5 Admin Dashboard
+=========================================================
+
+* Product Page: https://themesberg.com/product/admin-dashboard/volt-bootstrap-5-dashboard
+* Copyright 2020 Themesberg (https://www.themesberg.com)
+
+* Designed and coded by https://themesberg.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. Please contact us to request a removal.
+
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>CodeAura | {% block title %}{% endblock %}</title>
+        <!-- Primary Meta Tags -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="title" content="CodeAura">
+        <meta name="author" content="Prakshal Jain">
+        <meta name="description" content="CodeAura DashBoard">
+        <meta name="keywords" content="code, aura, codeaura, vibe, coding, hackathon, project, teams, events" />
+        <link rel="canonical" href="prakshal@buffalo.edu">
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static 'img/logo.jpg' %}">
+        <link rel="icon" type="image/jpg" sizes="32x32" href="{% static 'img/logo.jpg' %}">
+        <link rel="icon" type="image/jpg" sizes="16x16" href="{% static 'img/logo.jpg' %}">
+        <link rel="manifest" href="{% static 'img/logo.jpg' %}">
+        <link rel="mask-icon" href="{% static 'img/logo.jpg' %}" color="#ffffff">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
+
+        <!-- Fontawesome -->
+        <link type="text/css" href="{% static 'vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+
+        <!-- Notyf -->
+        <link type="text/css" href="{% static 'vendor/notyf/notyf.min.css' %}" rel="stylesheet">
+
+        <!-- Volt CSS -->
+        <link type="text/css" href="{% static 'css/DashBoard/volt.css' %}" rel="stylesheet">
+
+    </head>
+    <body>
+        {% block content %}
+        {% endblock %}
+
+        <!-- Core -->
+        <script src="{% static 'vendor/popper.js/dist/umd/popper.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+
+        <!-- Vendor JS -->
+        <script src="{% static 'vendor/onscreen/dist/on-screen.umd.min.js' %}"></script>
+
+        <!-- Slider -->
+        <script src="{% static 'vendor/nouislider/distribute/nouislider.min.js' %}"></script>
+
+        <!-- Jarallax -->
+        <script src="{% static 'vendor/jarallax/dist/jarallax.min.js' %}"></script>
+
+        <!-- Smooth scroll -->
+        <script src="{% static 'vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js' %}"></script>
+
+        <!-- Count up -->
+        <script src="{% static 'vendor/countup.js/dist/countUp.umd.js' %}"></script>
+
+        <!-- Notyf -->
+        <script src="{% static 'vendor/notyf/notyf.min.js' %}"></script>
+
+        <!-- Charts -->
+        <script src="{% static 'vendor/chartist/dist/chartist.min.js' %}"></script>
+        <script src="{% static 'vendor/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js' %}"></script>
+
+        <!-- Datepicker -->
+        <script src="{% static 'vendor/vanillajs-datepicker/dist/js/datepicker.min.js' %}"></script>
+
+        <!-- Simplebar -->
+        <script src="{% static 'vendor/simplebar/dist/simplebar.min.js' %}"></script>
+
+        <!-- Github buttons -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+        <!-- Volt JS -->
+        <script src="{% static 'js/volt.js' %}"></script>
+    
+    </body>
+</html>
